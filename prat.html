@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// let pr=myFetch('https://jsonplaceholder.typicode.com/todos/1')
+// function myFetch(params) {
+//     return fetch(params).then(da=>da.json())
+// }
+// // pr.then((da)=>{
+// //    return  da.json()
+// // },(err)=>{
+// //     console.log(err)
+// // }).then(f=>{
+// //     console.log(f)
+// // })
+
+
+// myFetch('https://jsonplaceholder.typicode.com/todos/1')
+// .then(data=>{
+//   console.log( "data1recived");
+//    console.log(data)
+//    return myFetch('https://jsonplaceholder.typicode.com/photos')
+// },(er)=>console.log(er)).then(da=>{
+//     console.log( "data2recived");
+//     console.log(da)
+
+//     return myFetch('https://jsonplaceolder.typicode.com/comments')
+// },(er)=>{
+//     console.log(er)
+// }).then(jda=>{
+//     console.log( "data3recived");
+//     console.log(jda)
+// }).catch(data=>console.log(data))
+let f=name()
+f.then(da=>console.log(da)).catch(e=>console.log("jjjj",e))
+ async function name(params) {
+     let h= await fetch('https://jsonplacehlder.typicode.com/todos/1')
+console.log(h)
+
+//  eeasy  way  anther 
+let j= await h.json()
+console.log(j)
+return  j;
+}
+
+
+
+    </script>
+</body>
+</html>

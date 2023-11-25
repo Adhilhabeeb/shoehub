@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inpus{
+            width: 300px;
+            height: 30px;
+            border-radius: 30px;
+        }
+        .ulsea{
+            width: 500px;
+            background-color: aliceblue;
+            color: rgba(0, 0, 0, 0.683);
+
+        }
+    </style>
+</head>
+<body>
+    <input  class="inpus"type="text">
+<ul class="ulsea">
+
+</ul>
+<script>
+    const menu=[
+    {
+       shoename:"Nikeredish",
+       shoeimage:"https://static.nike.com/a/images/c_limit,w_400,f_auto/t_product_v1/2f26814c-77d9-48de-9dd6-69ae4f8a4291/image.jpg",
+      shoeprice:"₹49199",
+      ratting:"4.7",
+    
+      categary:"Sports",
+      orginalprice:"₹60000",
+      offer:"43%"
+    },
+    {
+        shoename:"yellowish",
+        shoeimage:"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/92aadfa3-0184-4e34-8109-462798e812bb/air-force-1-lv8-older-shoes-ZDMd7M.png",
+       shoeprice:"₹99999",
+       ratting:"4.8",
+       categary:"Casual",
+       orginalprice:"₹135999",
+       offer:"60%"
+     },
+     {
+        shoename:"blueedish",
+        shoeimage:"https://assets.myntassets.com/h_480,q_100,w_360/v1/assets/images/1547909/2016/11/23/11479901512264-Nike-Men-Sports-Shoes-6531479901511997-1.jpg",
+       shoeprice:"₹65999",
+       ratting:"4.4",
+       categary:"Running",
+       orginalprice:"₹95999",offer:"68%"
+     },
+     {
+        shoename:"greeedish",
+        shoeimage:"https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/6804613a-ab0e-4927-9fa6-2d3d98890541/pegasus-trail-4-trail-running-shoes-LP9MFR.png",
+       shoeprice:"₹98199",
+       ratting:"4.5",
+       categary:"Sports",
+       orginalprice:"₹12999",offer:"78%"
+     },
+     {
+        shoename:"adidasedish",
+        shoeimage:"https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/k/p/x/-original-imagfyy2zech5n6d-bb.jpeg?q=90",
+       shoeprice:"₹88199",
+       ratting:"4.5",
+       categary:"Casual",
+       orginalprice:"₹99199",offer:"58%"
+     },
+     {
+        shoename:"woodland",
+        shoeimage:"https://img.tatacliq.com/images/i8/437Wx649H/MP000000014629445_437Wx649H_202209250005141.jpeg",
+       shoeprice:"₹7990",
+       ratting:"4.5",
+       categary:"Running",
+       orginalprice:"₹90999",offer:"65%"
+     }
+
+]
+    let ulsea=document.getElementsByClassName("ulsea")[0]
+    let searchinp=document.getElementsByClassName("inpus")[0]
+    searchinp.addEventListener("keyup",()=>{
+let val=searchinp.value
+let ar;
+
+ ar=menu.filter((item)=>{
+   
+
+ return item.shoename.toLowerCase().includes(val.toLowerCase())
+
+ })
+ console.log(ar)
+
+
+    })
+function name(params) {
+    return  console.log("jjjj")
+}
+
+
+
+let  kk={
+    name:"kkkk",
+    age:8889
+
+}
+
+
+let ob=Object.create(kk)
+
+console.log(ob.age)
+
+var Human = function() { 
+this.canSpeak = true;
+};
+// Basic greet function which will greet based on the canSpeak flag 
+Human.prototype.greet = function() {
+this.name="adhil"
+   if (this.canSpeak) {
+       return  console.log('Hi, I am ' + this.name+"nnn"+this.canSpeak); 
+}
+};
+
+
+
+console.log("kk",Human.prototype);
+
+let me=new Human;
+console.log("lll",me)
+;
+
+
+
+
+/////////////////////////////
+
+class  Mycla{
+
+   
+constructor(name,age , ch1,ch2,ch3){
+    this.love1=name
+this.love2=age
+this.childre1=ch1
+this.childre2=ch2
+this.childre3=ch3
+
+
+
+}
+
+lo(){
+    return  ` ${this.love1}  loves   ${this.love2} `
+}
+
+
+static  chil(para){
+
+    return`  ${para.love1}  and  ${para.love2 }  had  three children name child 1 is 
+      ${para.childre1} and child 2 is ${para.childre2}  and child 3 ${para.childre3}`
+
+}///////  ee   static ennath common ann   ee class is  
+
+
+}
+
+let objnew= new Mycla("Sabeena","Habeebulla","adhil","alfin","Esha");
+
+
+
+console.log(Mycla.chil(objnew));  ///   staic vilikkunnath  class name vech ann  allatha maliala pola objnew pla vech alla 
+console.log(objnew);
+////////////////////////////////////////////////////
+
+
+
+  //////////  we  can create any ofnthe m using class  the as like a afunction 
+   class  myst{
+constructor(nam){
+this.div=document.createElement("div")
+this.div.innerHTML=nam
+document.body.appendChild(this.div)
+
+
+
+}
+set divwid(wd){
+    this.div.style.width=wd
+
+}
+set divhei(height){
+
+this.div.style.height=height
+}
+  set bgco(bg){
+    this.div.style.backgroundColor=bg
+  }
+
+  get  bgcolorin(){
+
+    return  this.div.style.backgroundColor
+
+  }
+
+   }
+let muy=  new myst("jjjjj")
+muy.divwid=300+"px"
+muy.divhei=500+"px"
+muy.bgco="red"
+alert(muy.bgcolorin)
+
+
+/////////////////////////////////////////////////////////////////////////////////
+</script>
+</body>
+</html>

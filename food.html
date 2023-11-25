@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="food.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="./undefine.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="prviewpr jjjlp">
+
+  </div>
+  <!-- <header class="headeraft">
+
+    <div class="logoafter">
+      <div class="logoph "><img style="width: 100%;height: 110%;" src="shoehub-fotor-bg-remover-20230904104259.png"
+          alt=""></div>
+    </div>
+    <div class="navaft">
+      <div class="navaft1">
+        <a class="darka" style="color: black;" href="">Home</a>
+        <a class="darka" style="color: black;" href="./food.html">products</a>
+        <a class="darka" style="color: black;" href="">About</a>
+        <a class="darka" style="color: black;" href="">More</a>
+      </div>
+    </div>
+    <div class="iconsaft">
+      <div class="iconsftbut">
+        <div class="me-5 ">
+          <img class="iconorg  "  src="./icons8-cart-48.png" alt=""> -->
+          <!-- <i class="fa fa-shopping-cart  " id="icondark" aria-hidden="true"></i>
+
+        </div>
+        <div class="me-5">
+          <label class="switch">
+            <input class="inucheck" type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="me-5">
+          <i class="fa-regular fa-heart fa-xl " id="icondark"></i>
+        </div>
+        <div class="me-5">
+          <i class="fa fa-user  " id="icondark" aria-hidden="true"></i>
+        </div>
+      </div>
+
+    </div>
+  </header> -->
+
+  <div class="container">
+
+    <div class="buttdiv">
+      <div class="buttdiv1" > <h1>Shoes Hub</h1></div>
+     <div class="buttdiv2">
+<button data-id="All" class="buttono">All</button>
+<button data-id="Sports"  class="buttono">Sports</button>
+<button  data-id="Running" class="buttono">Running</button>
+<button  data-id="Casual"  class="buttono">Casual </button>
+<input  placeholder="search products here " class="inpus"type="text">
+</div>
+    </div>
+
+
+
+    <div class="rowcla  ">
+
+ 
+     
+
+
+
+                                                      .....
+    </div>
+   
+
+
+    
+
+
+    
+</div>
+
+
+ 
+
+
+
+<script>
+
+
+
+
+
+
+
+/* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  // window.onclick = function(event) {
+  //   if (!event.target.matches('.dropbtn')) {
+  //     var dropdowns = document.getElementsByClassName("dropdown-content");
+  //     var i;
+  //     for (i = 0; i < dropdowns.length; i++) {
+  //       var openDropdown = dropdowns[i];
+  //       if (openDropdown.classList.contains('show')) {
+  //         openDropdown.classList.remove('show');
+  //       }
+  //     }
+  //   }
+  // }
+  let auk=document.querySelectorAll(".uks")
+  let sevau=document.querySelector(".se-vau")
+  let drbu=document.querySelector(".dropbtn")
+  let imgnprre1=document.querySelector(".imgnprre1")
+  
+  console.log(drbu.textContent)
+  auk.forEach((aukel)=>{
+  aukel.addEventListener("click",(e)=>{
+  console.log(e.target.innerHTML)
+  
+  sevau.textContent=""
+  sevau.innerHTML=e.target.innerHTML
+  document.getElementById("myDropdown").classList.toggle("show");
+  })
+  })
+  let kk2=document.querySelectorAll(".kk2")
+  console.log(kk2);
+  kk2.forEach((kk2el)=>{
+      console.log(kk2el)
+      kk2el.addEventListener("click",()=>{
+          document.getElementById("myDropdown").classList.toggle("show");
+      })
+  
+  })
+  
+  let pi1s=document.querySelectorAll(".pi1s")
+  console.log(pi1s);
+  pi1s.forEach((pilel)=>{
+   pilel.addEventListener("click",(e)=>{
+  console.log(e.target.src)
+  imgnprre1.children[0].src=e.target.src
+  
+  
+   })
+  })
+  ///////////////////..............................................
+  let imagemayn1=document.getElementById("imagemayn1")
+  console.log(imagemayn1.src);
+  let imgduy=document.querySelectorAll(".imgduy")
+  
+  imgduy.forEach((imgdu)=>{
+  imgdu.addEventListener("click",(e)=>{
+      console.log(e.target.src)
+      imagemayn1.src=e.target.src
+     
+  })
+  
+  })
+  // ........................................................
+  //checking the pincode
+  let pincodeinp=document.querySelector(".pincodeinp")
+  let checkinp=document.querySelector("checkinp")
+  console.log(pincodeinp);
+  pincodeinp.addEventListener("keyup",(e)=>{
+  console.log(    e.target.value);
+  
+  })
+  function checkgy(eln){
+   return eln
+  }
+  </script>
+
+
+
+    <script src="food.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,303 @@
+body{
+    margin: 0;
+background-color: #fff;
+}
+
+.container{
+    width: 100%;
+
+    height: auto;
+   
+
+}
+.rangepr{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.prvalue{
+margin-left: 50%;
+}
+.pricerang{
+    width: 200px;
+    margin-left: auto;
+    margin-right: 40px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    height: 80px;
+    left: 80%;
+    display: block;
+    background-color: aqua;
+
+}
+.inmp{
+    width: 100%;
+    padding-left: 20px;
+    height: 30%; outline: none;
+}
+.priceu{
+width: 60%;
+/* background-color: #0ad221; */
+float: left;
+height: 100%;
+
+}
+.searhi{
+    width: 600px;
+    height: 100px;
+    float: left;
+   
+ top: 50%;
+
+    position: absolute;
+    left: 27%;
+   
+}
+.shoename{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: larger;
+    padding-top: 3%;
+    padding-left: 9%;
+
+height: auto;
+
+}
+
+.shoename > button{
+    border: none;
+  background-color:#0074e4 ;
+   font-size: large;
+   margin-left: 28%;
+   border: #0074e4;
+  
+   color: #fff;
+   border-radius: 6px;
+}
+.offerpror{
+
+    text-decoration: line-through;
+    margin-left: 3%;
+}
+.pricedis > .spanpr{
+margin-left: 8%;
+    font-size: 28px;
+    vertical-align: sub;
+    font-weight: 500;
+
+}
+hr{
+    width:270px;
+    height: 0.5px;
+
+    background-color:	#CD853F	 ;
+    margin-left: -5%;
+}
+.rowcla{
+    /* width: 100%; */
+    /* background-color: darkgrey; */
+   
+    display: grid;
+  grid-gap: 1rem;
+    padding-top: 30px;
+    padding-left: 90px;
+    
+}
+.row1{
+    width: 100%;
+    height: auto;
+    background-color: blueviolet;
+   display: flex;
+   padding: 100px;
+   
+
+}
+.bac1{
+height:36vh;
+
+    width: 600px;
+}
+.bac7{
+
+    height:36vh;
+    background-color: blue;
+        width: 600px;
+    }
+    .bac8{
+        height:36vh;
+        background-color: rgb(153, 255, 0);
+            width: 600px;
+        }
+        .bac9{
+            height:36vh;
+            background-color: rgb(0, 208, 255);
+                width: 600px;
+            }
+            .bac10{
+                height:36vh;
+                background-color: rgb(255, 0, 8);
+                    width: 600px;
+                }
+.bac2{
+    height:36vh;
+    background-color: rgb(0, 255, 13);
+        width: 600px;
+}
+.bac3{
+    height:36vh;
+    background-color: rgb(255, 0, 0);
+        width: 600px;
+}
+.bac4{
+    height:36vh;
+    background-color: rgb(255, 204, 0);
+        width: 600px;
+}
+.bac5{
+    height:36vh;
+    background-color: rgb(255, 0, 238);
+        width: 600px;
+}
+.bac6{
+    height:36vh;
+    background-color: rgb(0, 255, 132);
+        width: 600px;
+}
+
+.bank{
+    display: block;
+    width: 293px;
+    background-color: aqua;
+    height: 126px;
+    
+}
+.icon{
+    float: left;
+    margin-left: 3%;
+}
+.text{
+    float: left;
+    margin-left: 3%;
+}
+
+
+
+.imgshoes{
+width: 250px;
+background-color: chocolate;
+height: 100%;
+
+
+}
+.rowclasss{
+    width: 600px;
+    min-width: 480px;
+    margin-left: 30px;
+    background-color: darkred;
+    height:36vh;
+}
+.pricei1{
+    width: 60%;
+    height: 100%;
+    background-color: rgb(255, 0, 0);
+}
+
+.row11{
+    width: 600px;
+    display: flex;
+    margin-left: 8%;
+    height:36vh;
+    background-color: blue;
+}
+.row12{
+    width: 600px;
+    display: flex;
+    margin-left: 8%;
+    height:36vh;
+    background-color: blue;
+}
+
+.buttdiv1{
+    width: 100%;
+    height: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+.image{
+width: 40%;
+height: 100%;
+float: left;
+background-color: aquamarine;
+}
+.buttdiv2{
+    width: 100%;
+    height: auto;
+
+    /* background-color: rgb(9, 255, 0); */
+}
+.buttono{
+    width: 65px;
+    height: 40px;
+    margin-left: 1%;
+ border-radius: 10px;
+max-width: 65px;
+
+   border: 1px solid #696969;
+}
+.imgsh1{
+    width: 40%;
+    height: 100%;
+    background-color: darkorange;
+}
+.buttdiv{
+    width: 88%;
+position: relative;
+left: 10%;
+
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+background-color: #fff;
+transform:translateX(-5%) ;
+    /* background-color: brown; */
+    height: 120px;
+
+}
+.img1{
+    width: 40%;
+    height:36vh;
+    /* background-color: rgb(251, 255, 127); */
+}
+.row{
+margin-top: 2%;
+    width: 100%;
+  display: flex;
+    /* display: grid;
+    gap: 3rem 2rem; */
+    display: grid;
+  gap: 1rem 2rem;
+
+    justify-items: center;
+    background-color: rgb(44, 165, 42);
+    height: auto;
+
+}
+
+.pricing{
+    width: 70%;
+    height:36vh;
+    background-color: rgb(226, 43, 214);
+}
+@media (min-width: 600px) {
+    .rowcla { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px){
+
+    .buttdiv{
+
+    }
+  }
