@@ -682,6 +682,77 @@ align-items: center;
   background-color: #ffff;
   z-index: 10000;
 }
+.gridcat{
+  /* display: grid;  */
+  width: 100%;
+justify-content: space-around;
+  height: 50vh;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 4px;
+  row-gap: 10px;
+  padding-top: 10px;
+  display: flex;
+
+  /* grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 6px; 
+  grid-template-areas: 
+    ". . .";  */
+  
+
+    /* background-color: aqua; */
+}
+.gridcat >.itm{
+  width:30%;
+  margin-left: -10px;
+  height: 99%;
+ 
+  /* background-color: rgb(28, 174, 55); */
+}
+.gridcat>.it1{
+  background-image: url(./c82dc1ebc2cb3607b52a5dd7f9d724b8.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+color: black;
+display: flex;
+align-items: end;
+  background-size: cover;  filter: saturate(2);
+  background-size: cover;
+}
+.gridcat>.it1>button{
+  /* width: 140px; */
+ 
+}
+#buitc{
+  font-size: small;
+  font-weight: 900;
+  font-family: sans-serif;
+  outline: none;
+  border: none;
+  padding: 3px 12px;
+  max-height: 50px;
+  margin-left: 30px;
+ 
+  border-radius: 30px;
+  background-color: #fff;
+}
+.gridcat>.it2{
+  background-image: url("https://images.ctfassets.net/gscn32h7ckds/knac0vdk4he7lajtj1e/5c8fc57588a718d2291f1487ef1d8854/boy-is-trying-on-shoes.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 15px;display: flex;
+  align-items: end;
+  background-size: cover;  filter: saturate(2);
+}
+.gridcat>.it3{
+  background-image: url("https://ashokacontractornews.com/wp-content/uploads/2023/06/Article-12-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; margin-left: 15px;
+  filter: saturate(2);display: flex;
+  align-items: end;
+}
 .co{
   /* background-color:#ffff; */
   height: 90vh;
