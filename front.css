@@ -271,6 +271,13 @@ padding-left: 1%;
   border-top-right-radius: 30px;
   
 }
+#gridma {
+ width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+  /* background-color: rgb(125, 181, 4); */
+}
 .buttpho:nth-child(3){
   border-bottom-left-radius: 30px;
   
@@ -282,7 +289,7 @@ padding-left: 1%;
 .curser{
   width: 70px;
   height: 70px;
- 
+ z-index: 10;
   border: 1px solid rgb(0, 183, 255);
   border-radius: 50%;box-shadow: -1px 1px 11px 5px rgba(253,245,64,0.22);
 -webkit-box-shadow: -1px 1px 11px 5px rgba(0, 255, 221, 0.361);
@@ -685,11 +692,12 @@ align-items: center;
 .gridcat{
   /* display: grid;  */
   width: 100%;
-justify-content: space-around;
+/* justify-content: space-around; */
   height: 50vh;
   align-items: center;
   flex-wrap: wrap;
   padding-left: 4px;
+  transform: translateX(65px);
   row-gap: 10px;
   padding-top: 10px;
   display: flex;
