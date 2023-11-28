@@ -468,10 +468,74 @@ position: relative;
     border-radius: 60px;
     margin-left: 40px;
 }
+.twuim{
+  width:100% ;
+  text-transform: capitalize;
+  font-size: larger;
+ 
+  position: relative;
+  font-family: sans-serif;
+  /* background-color: blue;
+  height: 100%; */
+  color: #fff;
+
+}
+.bushg{
+  font-size: large;
+  font-weight: 900;
+  font-family: sans-serif;
+  outline: none;
+  border: none;
+  padding: 3px 12px;
+  max-height: 50px;
+ 
+ 
+  border-radius: 30px;
+  background-color: #fff;
+}
+.twuim>button{
+  position: absolute;
+  top: 85%;
+}
+.twuim>h2{
+  position: absolute;
+  top: 75%;
+}
+.twuim:first-child{
+background-size: cover;
+object-fit: fill;
+padding-left: 60px;
+  background-position: center;
+  background-image: url("https://www.woodlandworldwide.com/_next/image?url=https%3A%2F%2Fassets.woodlandworldwide.app%2Fwoodland-images%2FImages%2Fm_apparel_banner.png&w=1920&q=75");
+}
+.twuim:nth-child(2){
+  background-size: cover;
+object-fit: fill;
+display: flex;
+padding-right: 60px;
+justify-content: end;
+
+  background-position: center;
+  background-image: url("https://www.woodlandworldwide.com/_next/image?url=https%3A%2F%2Fassets.woodlandworldwide.app%2Fwoodland-images%2FImages%2Ff_apparel_banner.png&w=1920&q=75");
+}
+
+.twgrim{
+  width: 100%;
+  height: 60vh;
+  /* background-color: aqua; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 6px;
+  grid-template-areas:
+". .";
+  padding: 0px 0px;
+}
+
 .imgshh{
   width: 80%;
   height: 80vh;
-background-color: aqua;
+/* background-color: aqua; */
   border-radius: 60px;
   margin-left: 40px;max-width: 700px;
   max-height: fit-content;
