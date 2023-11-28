@@ -1,4 +1,6 @@
 
+
+
 const loadsec=this.document.querySelector(".section")
 const afterlo=document.querySelector(".afterload")
 const slides=document.querySelectorAll(".slides")
