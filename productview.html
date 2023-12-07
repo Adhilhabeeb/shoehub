@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./undefine.css">
+    <link rel="stylesheet" href="./undefine.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -210,7 +210,7 @@ height: 100vh;
     width:auto;
     /* height: 60%; */
     position: absolute;
-    top: 2%;
+    top: 5%;
     left: 3%;
     border-radius: 5px;
 border: 0.5px solid rgb(195, 193, 193);
@@ -378,8 +378,9 @@ display: flex;
 </head>
 <body>
     <div class="mayn">
-<div class="iconclo" onclick="cje(this)">close</div>
-<div class="mayn1"><div class="matyh1">
+<!-- <div class="iconclo" onclick="cje(this)">close</div> -->
+<div class="mayn1"><i class="fa-solid fa-arrow-left" style="color: grey; font-size: larger; margin: 1% 2%;"></i>
+    <div class="matyh1">  
 <div class="imagemayn1"><img id="imagemayn1"  style=" width: 100%;height: 100%;object-fit:cover;position: absolute;" src="./fachry-zella-devandra-bNSdIkCBJOs-unsplash.jpg" alt=""></div>
 <div class="imagemayn1oro">
 
@@ -401,7 +402,7 @@ Puma
 <div class="rattu">
     <div class="rattu1"><p style="margin-left: 3%;">4.8</p><span style="color:rgb(4, 120, 16);margin-left: 1%;" class="fa fa-star checked"> </span><div class="vl"></div> <p style=" color:rgba(129, 128, 128, 0.672);margin-left: 2%;">8 ratting</p></div>
 </div>
-<hr style="color: rgb(179, 255, 0);margin-top: 20%;border-bottom: 0.5px solid  rgba(129, 128, 128, 0.672);">
+<hr style="color: rgb(179, 255, 0);margin-top: 22%;border-bottom: 0.5px solid  rgba(129, 128, 128, 0.672);">
 
 <div class="shgnampri">
     <P class="shgnampriP"> ₹12999</P><p style="margin-left: 2%;text-transform: uppercase;color:  rgba(129, 128, 128, 0.672);font-size: larger;font-family: 'Lato', sans-serif;
@@ -468,6 +469,12 @@ font-family: 'Roboto', sans-serif;">25555</del><P style="margin-left: 1%;color: 
 </div>
     </div>
 <script>
+let vhk=document.getElementsByClassName("mayn1")[0].children[0]
+let shgnampri=document.getElementsByClassName("shgnampri")[0]
+let rattu=document.getElementsByClassName("rattu")[0]
+let shn=document.querySelector(".shn")
+console.log();
+
     let pinvalidtext =document.querySelector(".pinvalidtext")
     console.log(pinvalidtext)
 /* When the user clicks on the button, 
@@ -492,6 +499,8 @@ function myFunction() {
 let auk=document.querySelectorAll(".uks")
 let sevau=document.querySelector(".se-vau")
 let drbu=document.querySelector(".dropbtn")
+
+
 let imgnprre1=document.querySelector(".imgnprre1")
 console.log(drbu.textContent)
 auk.forEach((aukel)=>{
@@ -548,7 +557,7 @@ console.log(  "nvmvbmvmbvmb",  imagemayn1.classList.contains("animate__fadeIn"))
 // checking the pincode
 let pincodeinp=document.querySelector(".pincodeinp")
 console.log(pincodeinp);
-
+pincodeinp.addEventListener("keyup", () => checkgy() )
 
 function checkgy(eln){
     // alert("khkh")
@@ -575,18 +584,20 @@ console.log(ggjjo)///////   eee ggjjoo ennathann nammuda a aobject data kittiyat
 let  jspaobjar=JSON.parse(ggjjo)
 console.log("helloooo",jspaobjar[0])
 
-if (jspaobjar) {
-    alert("mmmm")
-    
-}else{
 
-    console.log("illlaaaaa")
-}
-let shn=document.querySelector(".shn")
-
+console.log("llllllļ/////",vhk)
+console.log(shgnampri.children);
 jspaobjar.forEach((elmobj)=>{
    shn.textContent=elmobj.shoename
+   rattu.children[0]=elmobj.ratting
+   shgnampri.children[0].textContent=elmobj.shoeprice
+   shgnampri.children[2].textContent=elmobj.orginalprice
+   shgnampri.children[3].textContent=`(${elmobj.offer} offer )`
 
+
+})
+vhk.addEventListener("click",()=>{
+window.location.href="food.html"
 
 })
 

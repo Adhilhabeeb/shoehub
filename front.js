@@ -1,12 +1,11 @@
 
-
-
 const loadsec=this.document.querySelector(".section")
 const afterlo=document.querySelector(".afterload")
 const slides=document.querySelectorAll(".slides")
 let  logo=document.querySelector(".imglo")
-
-
+let signorsignup=document.querySelector(".signorsignup")
+let togg=document.querySelectorAll("#togg")
+let iconsaft=document.querySelector(".iconsaft")
 console.log(1)
 let co=document.querySelector(".co")
 
@@ -185,3 +184,17 @@ cobu.addEventListener("click",()=>{
 window.location.href="food.html"
 
 })
+//////////////////////////////
+function profto(){
+togg.forEach((tog)=>tog.classList.toggle("tognon"))
+// signorsignup.classList.toggle("displnone")
+
+if (signorsignup.classList.contains("displnone")) {
+  signorsignup.classList.remove("displnone")
+  
+}else{
+  signorsignup.classList.add("displnone")
+  signorsignup
+}
+}
+

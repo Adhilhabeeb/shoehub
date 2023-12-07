@@ -1,87 +1,188 @@
-// let lov=document.querySelector(".heartfav")
-//     console.log(lov)
-//     let chf=false
 
-//     lov.addEventListener("click",(e)=>{
-     
-//    console.log(   e.target);
 
-// if (chf) {
-//     e.target.style.cssText="color:#cdcdcd;"
 
-// chf=false
+const loadsec=this.document.querySelector(".section")
+const afterlo=document.querySelector(".afterload")
+const slides=document.querySelectorAll(".slides")
+let  logo=document.querySelector(".imglo")
+ 
+const inucheck=document.querySelector(".inucheck")// inpt toggle
 
-// console.log(chf)
-// }else{
+console.log(1)
+let co=document.querySelector(".co")
 
-//     e.target.style.cssText="color:red"
+let coshild=co.children
+console.log("............",coshild)
+
+window.addEventListener("load",function(){
+
+
+loadsec.classList.add("loadfinish")
+afterlo.style.cssText="display:none;"
+
+})
+loadsec.addEventListener("transitionend",function(){
+  console.log(logo);
+    loadsec.style.cssText="display:none";
+    afterlo.style.cssText="display:block;"
+   
     
-//     chf=true
-//     console.log(chf)
-// }
-      
-//     })
-// /* When the user clicks on the button, 
-// toggle between hiding and showing the dropdown content */
-// function myFunction() {
-//   document.getElementById("myDropdown").classList.toggle("show");
-// }
-
-// // Close the dropdown if the user clicks outside of it
-// // window.onclick = function(event) {
-// //   if (!event.target.matches('.dropbtn')) {
-// //     var dropdowns = document.getElementsByClassName("dropdown-content");
-// //     var i;
-// //     for (i = 0; i < dropdowns.length; i++) {
-// //       var openDropdown = dropdowns[i];
-// //       if (openDropdown.classList.contains('show')) {
-// //         openDropdown.classList.remove('show');
-// //       }
-// //     }
-// //   }
-// // }
-// let auk=document.querySelectorAll(".uks")
-// let sevau=document.querySelector(".se-vau")
-// let drbu=document.querySelector(".dropbtn")
-// let imgnprre1=document.querySelector(".imgnprre1")
-// console.log(drbu.textContent)
-// auk.forEach((aukel)=>{
-// aukel.addEventListener("click",(e)=>{
-// console.log(e.target.innerHTML)
-
-// sevau.textContent=""
-// sevau.innerHTML=e.target.innerHTML
-// document.getElementById("myDropdown").classList.toggle("show");
-// })
-// })
-// let kk2=document.querySelectorAll(".kk2")
-// console.log(kk2);
-// kk2.forEach((kk2el)=>{
-//     console.log(kk2el)
-//     kk2el.addEventListener("click",()=>{
-//         document.getElementById("myDropdown").classList.toggle("show");
-//     })
-
-// })
-
-// let pi1s=document.querySelectorAll(".pi1s")
-// console.log(pi1s);
-// pi1s.forEach((pilel)=>{
-//  pilel.addEventListener("click",(e)=>{
-// console.log(e.target.src)
-// imgnprre1.children[0].src=e.target.src
+})
 
 
-//  })
-// })
-if (navigator.geolocation) { navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationFailure);
-} else {
-console.log("Geolocation is not supported by this browser.");
+///////////////////////////////////////////////////////////////////////////
+
+const textani=document.querySelector(".textani")
+
+window.addEventListener("load",()=>{
+textani.classList.add("animate__backInRight")
+
+})
+
+var index=0
+function infor(){
+ index++
+
+ if (index>slides.length-1) {
+   
+   index=0
+    
+ }else if (index<0) {
+   index=slides.length-1
+    
+ }
+ slides.forEach((slide)=>{
+    slide.style.cssText="display:none"
+})
+slides[index].style.cssText="display:block"
+console.log(index)
+  setTimeout(infor,3000)
 }
-// Function that will be called if the query succeeds
- function geolocationSuccess(pos) {
-console.log("Your location is " + pos.coords.latitude + "°, " + pos.coords.longitude + "°.");
-};
-// Function that will be called if the query fails
- function geolocationFailure(err) { console.log("ERROR (" + err.code + "): " + err.message);
-};
+infor();
+
+const navhead=document.querySelector(".headeraft")
+console.log(navhead);
+//scroll the nav bar come  
+window.addEventListener("scroll",()=>{
+console.log(window.pageYOffset,navhead.offsetTop,navhead.getBoundingClientRect().height );
+
+// oageofsety is used for gettin the the page y 
+if (window.pageYOffset>navhead.getBoundingClientRect().height) {
+  // alert("hello")
+  navhead.classList.add("fixed")
+}else{
+  navhead.classList.remove("fixed")
+}
+if (window.pageYOffset<navhead.getBoundingClientRect().height) {
+ console.log(`bggghgkhfhk`)
+}
+
+
+
+
+})
+
+
+
+/////////////////////////////////adding cureser effect//////////////////////////
+  //  getting the curser div from the dom 
+  const curser=document.querySelector(".curser");
+  // when user moving mouse through it 
+  window.addEventListener("mousemove",(e)=>{
+      //getting pagey and page x
+// console.log(e.pageX,e.clientX,e.pageY,e.clientY)
+// add style tranform for 
+curser.style.cssText=`transform: translate3d(calc(${e.pageX}px - 50%),calc(${e.pageY}px - 50%),0);`
+  })
+
+ window.addEventListener("mouseout",()=>{
+curser.style.cssText="display:none;"
+ })
+/////////////////////////////////////////////the darkmodeworking/////////////////////
+
+
+
+
+
+// console.log(inucheck)
+const  navelements=document.querySelectorAll(".darka")//navelemts home about etc
+// console.log(navelements)
+//  when user click on the toggle input 
+inucheck.addEventListener("click",()=>{
+    alert("inpokk")
+  inucheck.classList.toggle("dd")
+  if ( inucheck.classList.contains("dd")) {
+     // body style change
+document.body.style.backgroundColor="#252526"
+coshild[0].style.color="#ffff"
+logo.src="WhatsApp Image 2023-11-13 at 8.23.39 PM-fotor-bg-remover-20231113215229.png"
+
+coshild[1].style.cssText="color:black;background-color:#fff;"
+  // we get the nav elements as in array so we foreached 
+ navelements.forEach((elem)=>{
+  //adding the color to the nav ila oro elements 
+elem.style.cssText="color:white;"
+ })
+// getting icons from dom 
+ const icom=document.querySelectorAll("#icondark")
+ //we get  icons as in array format so we use foreach
+icom.forEach((icons)=>{
+// ennitt  aa  icons inta color matti
+  icons.style.cssText="color:#fff;"
+
+})
+// giving color to the textani as white
+textani.style.cssText="color:#fff;"
+
+// getting the button from dom and giving the color
+const textanibutt=document.querySelector(".explore")
+textanibutt.style.cssText=" box-shadow: #fff 0px 1px 5px;  border: 1px solid #fff;color:#fff"
+////
+navhead.style.cssText="background-color:black"
+  }else{// giving bg color as pazhayath
+    document.body.style.backgroundColor =""; 
+    logo.src="WhatsApp Image 2023-11-13 at 8.23.39 PM copy-fotor-bg-remover-20231113212538.png"
+    coshild[0].style.color=""
+coshild[1].style.cssText=""
+ navelements.forEach((elem)=>{
+ // giving  color as pazhayath
+elem.style.cssText="color:black;"
+
+ })
+
+ const icom=document.querySelectorAll("#icondark")
+
+icom.forEach((icons)=>{
+// giving  as pazhayath
+  icons.style.cssText=""
+
+})
+// giving as pazhayath
+textani.style.cssText=""
+
+
+const textanibutt=document.querySelector(".explore")// giving  as pazhayath
+textanibutt.style.cssText=" "
+
+///////
+navhead.style.cssText=""
+
+  }
+
+  
+
+})
+
+////...........
+
+
+
+
+////////////////////////////////////////////////////////////////
+
+let cobu=document.getElementById("cobu")
+cobu.addEventListener("click",()=>{
+
+window.location.href="food.html"
+
+})
