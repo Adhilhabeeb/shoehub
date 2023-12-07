@@ -850,7 +850,7 @@ console.log(encodedData)
 
 
 //// senting the data to a page     
-let urlsen="productview.html?data="+encodedData;    /// the   ?data=  is important to add data 
+let urlsen="?data="+encodedData;    /// the   ?data=  is important to add data 
 
  window.location.href = urlsen;
 
