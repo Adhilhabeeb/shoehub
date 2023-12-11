@@ -595,6 +595,9 @@ displaymenuitem(menu)
 
 
 })
+fetch('./shoes.json')
+  .then(response => response.json())
+  .then(data =>  displaymenuitem(data) );
 
 function displaymenuitem(menuo){
     let displaymenu=menuo.map(function(elem){
@@ -808,19 +811,16 @@ function hhhhkk(){
 
 
 function  ggarprodview(ggarel){
-console.log("kkk",prviewpr.children)
-let arrgre=[]
 
+let arrgre=[]
+prviewpr.style.csstext="display:none"
 arrgre.push(ggarel)
 
  
 
-  let disprodel=arrgre.map(arrgreel=>{
-  return  `<p> ${arrgreel.shoename} ad</p>`
-    
-  }).join("")
+  
 
-  prviewpr.innerHTML=disprodel;
+  // prviewpr.innerHTML=disprodel;
 
 
 }

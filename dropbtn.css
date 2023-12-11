@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=PT+Sans+Narrow&family=Playpen+Sans&family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato&family=PT+Sans+Narrow&family=Roboto:wght@400;700&display=swap');
+        body{
+            margin: 0;
+    
+        }
+         /* ///////////// /////////////////////*/
+
+        .dropbtn {
+  background-color: #fff;
+  
+ width: 150px;
+  color:grey;
+
+height: 40px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+border-radius: 3px;
+ 
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: none;
+
+}
+
+i.fa-angle-down{
+    position: absolute;
+    left: 80%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 100px; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: gray;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #f7f7f7;}
+
+.show {display: block;}
+        /* ///////////// /////////////////////*/
+        .hertfavan {
+  transform-origin: 50% 50%;
+  color: #e90000;
+
+  animation: pulse 2000ms;
+}
+.heartfav{
+    color: #e90000;
+}
+/* i.fa-heart:active{
+    
+    transform-origin: 50% 50%;
+  
+  color:red;
+  animation: pulse 2000ms;
+} */
+
+
+i.fa-heart{
+   margin-top: 9%;
+   margin-left: 80%;
+   top: 13%;
+   color: #cdcdcd;
+   font-size: larger;
+   position: absolute;
+
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+  15% {
+    transform: scaleX(1.25) scaleY(1.25);
+  }
+  30% {
+    transform: scaleX(1) scaleY(1);
+  }
+  45% {
+    transform: scaleX(1.25) scaleY(1.25);
+  }
+  60% {
+    transform: scaleX(1) scaleY(1);
+  }
+  75% {
+    transform: scaleX(1.25) scaleY(1.25);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+        .heart {
+  font-size: 45px;
+	color:rgb(60, 255, 0);
+}
+.heart-des {
+  font-size: 25px;
+	color:#00ff80;
+}
+        
+        .mao{
+            width: 100%;
+
+            height:100vh;
+            background-color: rgb(0, 0, 0);
+            
+        }
+        .cart{
+            width: 600px;
+            height: 45vh;
+            position: relative;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 10px;
+            background-color:#ffff;
+          
+        }
+        .imgnprre{
+            width: 100%;
+            height: 65%;
+            position: absolute;
+            top:5.5%;
+            display: flex;
+            align-items: center;
+            /* background-color: aqua; */
+        }
+        .imgnprre1{
+            width: 43%;
+            /* background-color: rgb(77, 255, 0); */
+            float: left;
+            height: 99%;
+        }
+        .imgnprre2{
+            width: 57%;
+            /* background-color: rgb(212, 255, 0); */
+            float: left;
+            position: relative;
+            height: 99%;
+        }
+        .imshpi{
+            width: 100%;
+            height: 30%;
+            position: absolute;
+            top: 70%;
+            align-items: center;
+          display: flex;
+            
+            
+            /* background-color: rgb(0, 235, 4); */
+            border-bottom-left-radius:10px ;
+            border-bottom-right-radius:10px ;
+        }
+        /* .pick1{
+            width: 50%;
+            height: 100%;
+            background-color: rgb(255, 252, 80);
+        } */
+        .pi{
+            width: 50%;
+            height: 90%;
+            display: flex;
+            float: left;
+            align-items: center;
+            position: relative;
+            /* background-color: mediumaquamarine; */
+        }
+        .pi1{
+            width: 50%;
+            height: 90%;
+ 
+            float: left;
+         
+         
+            position: relative;
+            /* background-color: rgb(102, 106, 205); */
+        }
+.pi1s{
+    width: 33%;
+    height: 90%;
+   margin-left: 0.5vw;
+    /* background-color: deepskyblue; */
+}
+.namesho{
+    /* width: 100%; */
+    position: absolute;
+color: rgb(9, 7, 7);
+text-transform: uppercase;
+font-size: large;
+font-weight:600;
+font-family: "GothamHTF-Book","sans-serif";
+/* transform: translateY(-30%); */
+    /* background-color: magenta; */
+   display: inline;
+    padding-left: 10px;
+    /* height: 20%; */
+}
+.reviewpo{
+    /* width: 100%; */
+  margin-left: 50%;
+
+   font-weight: bold;
+   font-family: 'Lato', sans-serif;
+font-family: 'PT Sans Narrow', sans-serif;
+font-family: 'Roboto', sans-serif;
+  font-size: x-small;
+   
+color: grey;
+   top: 19%;
+   position: absolute;
+    /* background-color: #1000e9; */
+
+}
+
+.textshoes{
+    width: 100%;
+position: absolute;
+top:49%;
+padding-left: 10px;
+font-family: sans-serif;color: rgb(103, 102, 102);
+    /* background-color: mediumpurple; */
+    /* height: 35%; */
+}
+.discripshoe{
+    width: 95%;
+    height: 100%;
+    text-decoration-style: none;
+    font-size: small;
+    font-weight: 400;
+    text-overflow: hidden;
+}
+.shpric{
+    height: 4.5vh;
+    top: 30%;
+    width: auto;
+    
+    font-size: medium;
+    color: grey;
+    padding-left: 1vw;
+    display: flex;
+    font-weight: bold;
+    position: absolute;
+    /* background-color: rgb(4, 0, 255); */
+    /* width: 100%; */
+    font-family: 'Lato', sans-serif;
+font-family: 'Playpen Sans', cursive;
+font-family: 'PT Sans Narrow', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
+.pil11{
+   
+    height: 50%;
+    align-items: center;
+    display: flex;
+    padding-left: 20px;
+
+    /* background-color: #e90000; */
+}
+.pil12{
+
+height: 50%;
+    align-items: center;
+    display: flex;
+    padding-left: 20px;
+
+    /* background-color: #e5e900; */
+}
+.adcartbu{
+    border: none;
+    outline: none;
+    /* background-color: orange; */
+    width: 96%;
+  height: 96%;
+    margin-left: -2%;
+    padding: 18px 8px;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    width: 98%;
+    border: none;
+font-size: 15px;
+   display: flex;
+   justify-content: center;
+font-weight: 500;
+   align-items: center;
+    background: #ff9f00;
+    color: #fff;
+    font-family: Roboto,Arial,sans-serif;
+    border-radius: 4%;
+}
+.adcartbu>p{
+    margin-left: 3%;
+}
+.share{
+    position: absolute;
+    margin-left: 80%;
+    top: 11%;
+    
+}

@@ -5,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+   
+
     <link rel="stylesheet" href="./undefine.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        @import "productview.css";
+        @import "./dropbtn.css";
         :root {
   --animate-duration: 1s;
   --animate-delay: 1s;
@@ -137,6 +141,7 @@ font-weight: 500;
     outline: none; font-family: Roboto,Arial,sans-serif;
 
         }
+
         
         .shgnampriP{
 
@@ -309,6 +314,7 @@ padding-right: 2px;
 color: rgba(129, 128, 128, 0.672);
 
 }
+
 .inclutax{
     width: 100%;
     height: 4%;
@@ -421,7 +427,7 @@ font-family: 'Roboto', sans-serif;">25555</del><P style="margin-left: 1%;color: 
     </div>
     <div class="sizesg2" style="padding-top: 1%;">
         <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn kk2"><p class="kk2 se-vau" >Select size </p> <i class="fa fa-angle-down kk2" ></i></button>
+            <button onclick="()=>{  document.getElementById('myDropdown').classList.toggle('show')}"  style="font-size: medium;" class="dropbtn kk2  se-vau">Select Size <i class='fa fa-angle-down kk2' ></i> </button>
             <div id="myDropdown" class="dropdown-content">
               <a class="uks" href="#home">1 UK</a>
               <a class="uks" href="#about">2 UK</a>
@@ -479,23 +485,21 @@ console.log();
     console.log(pinvalidtext)
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
 
-// Close the dropdown if the user clicks outside of it
-// window.onclick = function(event) {
-//   if (!event.target.matches('.dropbtn')) {
-//     var dropdowns = document.getElementsByClassName("dropdown-content");
-//     var i;
-//     for (i = 0; i < dropdowns.length; i++) {
-//       var openDropdown = dropdowns[i];
-//       if (openDropdown.classList.contains('show')) {
-//         openDropdown.classList.remove('show');
-//       }
-//     }
-//   }
-// }
+
+//Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 let auk=document.querySelectorAll(".uks")
 let sevau=document.querySelector(".se-vau")
 let drbu=document.querySelector(".dropbtn")
@@ -508,15 +512,17 @@ aukel.addEventListener("click",(e)=>{
 console.log(e.target.innerHTML)
 
 sevau.textContent=""
-sevau.innerHTML=e.target.innerHTML
-document.getElementById("myDropdown").classList.toggle("show");
+sevau.innerHTML=e.target.innerHTML+"<i class='fa fa-angle-down kk2' ></i>"
+
 })
 })
 let kk2=document.querySelectorAll(".kk2")
 console.log(kk2);
 kk2.forEach((kk2el)=>{
     console.log(kk2el)
+   
     kk2el.addEventListener("click",()=>{
+       
         document.getElementById("myDropdown").classList.toggle("show");
     })
 
