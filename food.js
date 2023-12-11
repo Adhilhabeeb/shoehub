@@ -415,6 +415,7 @@ let ggar=[]
 let cartarr=[]
 let addbag=[]
 let  bagvcart=[]
+let arrp=[]
 
 const menu=[
     {
@@ -887,6 +888,20 @@ console.log(ggjjoo)///////   eee ggjjoo ennathann nammuda a aobject data kittiya
 // parsing the jsonstrigified string to json oparse
 let  jspaobjar=JSON.parse(ggjjoo)
 console.log("adhilhabeebmaded",jspaobjar[0].shoename)
+
+// arrp.push()
+let strinfiedaarp=JSON.stringify(jspaobjar[0])
+
+
+let store=localStorage.setItem("arraybag",strinfiedaarp)
+let getarrstloca=localStorage.getItem("arraybag")
+console.log("the new loca",getarrstloca)
+
+if (getarrstloca) {
+  let store=localStorage.setItem("arraybag",getarrstloca+","+strinfiedaarp)
+  let getarrstlocal=localStorage.getItem("arraybag")
+  console.log("the is the",getarrstlocal)
+}
 
   
 
