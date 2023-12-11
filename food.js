@@ -413,6 +413,8 @@ let conta=document.querySelector(".container")
 console.log(conta);
 let ggar=[]
 let cartarr=[]
+let addbag=[]
+let  bagvcart=[]
 
 const menu=[
     {
@@ -865,13 +867,36 @@ console.log(encodedData)
 //// senting the data to a page     
 let urlsen="productview.html?data="+encodedData;    /// the   ?data=  is important to add data 
 
-//  window.location.href = urlsen;
+ window.location.href = urlsen;
 
 
 
 
 
 }
+
+window.addEventListener("load",(()=>{
+  let hhrh=window.location.search
+let sliceddata=hhrh.slice(6);
+console.log("sliced data ",sliceddata)
+let ggjjoo=decodeURIComponent(sliceddata)
+
+console.log(ggjjoo)///////   eee ggjjoo ennathann nammuda a aobject data kittiyath 
+//////////.....................................................................................................................................
+
+// parsing the jsonstrigified string to json oparse
+let  jspaobjar=JSON.parse(ggjjoo)
+console.log("adhilhabeebmaded",jspaobjar[0])
+addbag.push(jspaobjar[0])
+bagvcart.push(...addbag)
+
+  
+localStorage.setItem("cartbag",JSON.stringify(addbag))
+let localcartdata=localStorage.getItem("cartbag"); 
+console.log("localdata",localcartdata)
+console.log("the add bagged array ",bagvcart)
+}))
+
 
 
 ////

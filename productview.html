@@ -475,6 +475,10 @@ font-family: 'Roboto', sans-serif;">25555</del><P style="margin-left: 1%;color: 
 </div>
     </div>
 <script>
+//    import { cartarrayset} from "./arraycart"
+    let addcar=document.getElementsByClassName("addcar")[0];
+    console.log(addcar)
+    let adbagarr=[]
 let vhk=document.getElementsByClassName("mayn1")[0].children[0]
 let shgnampri=document.getElementsByClassName("shgnampri")[0]
 let rattu=document.getElementsByClassName("rattu")[0]
@@ -614,6 +618,47 @@ window.location.href="food.html"
 // console.log(encoded)
 // console.log(hhk)
 
+
+addcar.addEventListener("click",()=>{
+
+senttocartfood()
+
+
+})
+function senttocartfood(){
+    alert("kk")
+    let hhrh=window.location.search
+
+let ggjjoo=decodeURIComponent(hhrh.slice(6))
+
+console.log(ggjjoo)///////   eee ggjjoo ennathann nammuda a aobject data kittiyath 
+//////////.....................................................................................................................................
+
+// parsing the jsonstrigified string to json oparse
+let  jspaobjar=JSON.parse(ggjjoo)
+console.log("adhilhabeebmaded",jspaobjar[0])
+adbagarr.push(jspaobjar[0])
+console.log("addarrbag is the ",adbagarr
+)
+
+let striar=JSON.stringify(adbagarr)
+console.log("mmjjhgtrrrrrrrr",typeof( striar));
+
+var encodedData = encodeURIComponent(striar);
+console.log(encodedData)
+
+
+
+
+//// senting the data to a page     
+let urlsen="food.html?data="+encodedData;    /// the   ?data=  is important to add data 
+
+ window.location.href = urlsen;
+
+// console.log("imported array",cartarrayset)
+
+
+}
 </script>
 <!-- <script src="./food.js"></script> -->
 
