@@ -412,6 +412,7 @@ let truch=false
 let conta=document.querySelector(".container")
 console.log(conta);
 let ggar=[]
+let cartarr=[]
 
 const menu=[
     {
@@ -719,6 +720,17 @@ let arfilte=menu.filter((meele)=>{
   return el.id==meele.shoename
 })
 
+// cartarr.push(arfilte)
+let ma=arfilte.map((or)=>JSON.stringify(or))
+
+let se=new Set(ma)
+
+let parseddacart=JSON.parse(...se)
+cartarr.push(parseddacart)
+console.log(" the new array duplicated ",se)
+
+console.log(" the new array is the cart ",cartarr)
+
 conta.classList.toggle('opac')
 if (conta.classList.contains("opac")) {
 // Get the current page scroll position 
@@ -767,6 +779,7 @@ function  hhh(el){
 }
 
 function prodvie(para){
+  alert("new")
   let ggp=[...para]
   jsonObject = ggp.map(JSON.stringify);
 const letters = new Set(jsonObject);
@@ -774,7 +787,7 @@ const letters = new Set(jsonObject);
 // console.log(",,,,,,,,,,,,,",letters)
 
 ggar.push(...letters)
-
+console.log("the ggar array new",ggar)
 // ggar.push(...letters)
 
 // console.log("llllll",ggar)
@@ -852,7 +865,7 @@ console.log(encodedData)
 //// senting the data to a page     
 let urlsen="productview.html?data="+encodedData;    /// the   ?data=  is important to add data 
 
- window.location.href = urlsen;
+//  window.location.href = urlsen;
 
 
 
