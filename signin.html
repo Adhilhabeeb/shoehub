@@ -161,7 +161,7 @@
             <span>Not a member? <a href="./signup.html"> Sign Up</a></span></span>
     </form>
     <script>
-
+let ch=true
       let container=document.querySelector("form")
       function val(e) {
         console.log(container)
@@ -172,12 +172,15 @@
     inputsdo.forEach((inp)=>{
     if (inp.value.trim()=='') {
        console.log("empty")
+       ch=false
+       console.log(ch)
        inp.style.border="1px solid red"
        inp.style.color=" red"
     }
     else{
         inp.style.border=""
-      
+        ch=true
+        console.log(ch)
         inp.style.color=""
     }
  })
@@ -191,16 +194,29 @@
     console.log(imppass.value.trim())
     let testj=regexb.test(imppass.value.trim())
     if (testj  ) {
+        ch=true
         console.log("valid pass")
         
     } 
     else{
         imppass.value=""
         imppass.style.border="1px solid red"
-
+        ch=false
    imppass.placeholder="enter valid passward"
     
     }
+    if (ch==true) {
+    console.log("submit yo go")
+    // custommodal.style.cssText="display:block"
+    container.style.cssText="opacity:0.5;"
+    
+        window.location.href="index.html"
+
+ 
+    
+}else{
+    console.log(" noooooooooooooooooooosubmit yo go")
+}
       }
     </script>
 </body>

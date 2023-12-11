@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
     <style>
         *{
@@ -153,10 +154,121 @@ input:focus{
     height: 49px;
     margin-top:2px;
 }
+.succes {
+  background-color: #4BB543;
+}
+.succes-animation {
+  animation: succes-pulse 2s infinite;
+}
+
+.danger {
+  background-color: #CA0B00;
+}
+.danger-animation {
+  animation: danger-pulse 2s infinite;
+}
+
+.custom-modal {
+  position: absolute;
+  width: 350px;
+ z-index: 1000;
+top: 30%;
+display: none;
+  min-height: 250px;
+
+  border: 0.5px solid rgb(47, 46, 46);
+  background-color: #fff;
+  border-radius: 30px;
+ 
+}
+.custom-modal .content { 
+  position: absolute;
+
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+}
+.custom-modal .content .type {
+  font-size: 18px;
+  color: #999;
+}
+.custom-modal .content .message-type {
+  font-size: 24px;
+  color: #000;
+}
+.custom-modal .border-bottom {
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  border-radius: 0 0 30px 30px;
+  bottom: -20px;
+  margin: 0 25px;
+}
+.custom-modal .icon-top {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 34px;
+  margin: 0 125px;
+  font-size: 30px;
+  color: #fff;
+  line-height: 100px;
+  text-align: center;
+}
+@keyframes succes-pulse { 
+  0% {
+    box-shadow: 0px 0px 30px 20px rgba(75, 181, 67, .2);
+  }
+  50% {
+    box-shadow: 0px 0px 30px 20px rgba(75, 181, 67, .4);
+  }
+  100% {
+    box-shadow: 0px 0px 30px 20px rgba(75, 181, 67, .2);
+  }
+}
+@keyframes danger-pulse { 
+  0% {
+    box-shadow: 0px 0px 30px 20px rgba(202, 11, 0, .2);
+  }
+  50% {
+    box-shadow: 0px 0px 30px 20px rgba(202, 11, 0, .4);
+  }
+  100% {
+    box-shadow: 0px 0px 30px 20px rgba(202, 11, 0, .2);
+  }
+}
+
+
+.page-wrapper {
+  height: 100vh;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+}
+body { margin:0; font-family: 'Roboto';}
+@media only screen and (max-width: 800px) {
+  .page-wrapper {
+    flex-direction: column;
+  }
+}
+
 
     </style>
 </head>
 <body>
+    
+        <div class="custom-modal">
+            <div class="succes succes-animation icon-top"><i class="fa fa-check"></i></div>
+            <div class="succes border-bottom"></div>
+            <div class="content">
+              <p class="type">Registered</p>
+              <p class="message-type">Succesfully </p>
+            </div>
+          </div>
+    
     <form id="signupfo" class="container ">
  
         <h3 id="Heading">Sign Up</h3>
@@ -184,7 +296,8 @@ input:focus{
 <script>
     let signupbutt=document.querySelector("#signupbutton")
 let  signupfo=document.querySelector("#signupfo")
-
+let ch=true
+let custommodal=document.querySelector(".custom-modal")
 const impem  = document.querySelector('.eminput');
 const imppass = document.querySelectorAll('.passinkk');
 
@@ -208,21 +321,23 @@ alert("l")
        console.log("empty")
        inp.style.border="1px solid red"
        inp.style.color=" red"
+       ch=false
     }
     else{
         inp.style.border=""
-      
+        ch=true
         inp.style.color=""
     }
  })
 ////////////////////////////////////
  let result = regex.test(impem.value.trim());
-         if (result  ) {
+         if (result  ) {  ch=true
            console.log("The  is a valid email address!")
          } else {
             impem.value=""
             impem.style.cssText="border:1px solid red ;"
             impem.placeholder="enter valid email"
+            ch=false
        
          }
 /////////////
@@ -233,10 +348,10 @@ imppass.forEach((inp)=>{
     let testj=regexb.test(inp.value.trim())
     if (testj ) {
         console.log("valid pass")
-        
+        ch=true
     } 
     else{
-   
+        ch=false
    inp.placeholder="enter valid passward"
     
     }
@@ -247,7 +362,7 @@ let hhg=imppass[1];
 console.log("mmmm",hh,"nn",hhg)
 if ((hh.value.trim()==hhg.value.trim()) && (!hh.value.trim()=="")&& (!hhg.value.trim()=="")) {
     console.log("eql passward")
-   
+    ch=true
     hh.style.cssText=""
 hhg.style.cssText=""
    
@@ -256,8 +371,22 @@ hhg.style.cssText=""
 hh.style.cssText="border:1px solid red ;"
 hh.value=""
 hhg.value=""
+ch=false
 hhg.style.cssText="border:1px solid red ;"
 }
+if (ch==true) {
+    console.log("submit yo go")
+    custommodal.style.cssText="display:block"
+    signupfo.style.cssText="opacity:0.5;"
+    setTimeout(()=>{
+        window.location.href="index.html"
+    },2000)
+ 
+    
+}else{
+    console.log(" noooooooooooooooooooosubmit yo go")
+}
+
 
 }
 

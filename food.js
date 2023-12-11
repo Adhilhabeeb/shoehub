@@ -886,15 +886,10 @@ console.log(ggjjoo)///////   eee ggjjoo ennathann nammuda a aobject data kittiya
 
 // parsing the jsonstrigified string to json oparse
 let  jspaobjar=JSON.parse(ggjjoo)
-console.log("adhilhabeebmaded",jspaobjar[0])
-addbag.push(jspaobjar[0])
-bagvcart.push(...addbag)
+console.log("adhilhabeebmaded",jspaobjar[0].shoename)
 
   
-localStorage.setItem("cartbag",JSON.stringify(addbag))
-let localcartdata=localStorage.getItem("cartbag"); 
-console.log("localdata",localcartdata)
-console.log("the add bagged array ",bagvcart)
+
 }))
 
 
