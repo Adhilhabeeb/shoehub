@@ -997,15 +997,15 @@ header {
 }
 
 .gridcat>.it1 {
-  background-image: url("https://i.pinimg.com/564x/74/90/e9/7490e96ddafff9c8f36b2e477fff1fd1.jpg");
+  background-image: url("./images/7490e96ddafff9c8f36b2e477fff1fd1\ \(1\).jpg") !important;
   background-position: top;
   background-repeat: no-repeat;
   color: black;
   display: flex;
 
   align-items: end;
-  background-size: 70%;
-  background-size: cover;
+  background-size: 10%;
+
   filter: saturate(2);
 
 }
