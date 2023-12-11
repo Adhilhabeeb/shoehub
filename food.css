@@ -13,6 +13,7 @@ background-color: #fff;
 .prviewpr{
   position: absolute;
 height: 100%;
+display: none;
 background-color: firebrick;
 z-index: 10000;
 left: 50%;

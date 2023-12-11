@@ -11,13 +11,18 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+input::placeholder{
+    font-size: smaller !important;
+    color: grey !important;
+}
 body{
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     background-color: #ffffff;
 }
-#container{
+.container{
     margin:auto;
     display: flex;
     color:#000000;
@@ -90,7 +95,7 @@ input::placeholder{
     border-bottom-left-radius: 10px;
     fill: white;
 }
-button{
+button {
     width:fit-content;
     margin:20px auto;
     padding:10px 20px;
@@ -98,8 +103,8 @@ button{
     border: none;
     border-radius: 20px;
     font-weight: 700;
-    color:white !important;
-    background-color: #3872a4;
+    color:white;
+    background-color: #248277;
     font-family:sans-serif;
     font-size: 1.1em;
     cursor: pointer;
@@ -152,7 +157,7 @@ input:focus{
     </style>
 </head>
 <body>
-    <form id="container">
+    <form id="signupfo" class="container ">
  
         <h3 id="Heading">Sign Up</h3>
         
@@ -160,21 +165,102 @@ input:focus{
         <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="100%"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg></div><input name="username" type="text" placeholder="Username" required></div>
         <div class="row name"><input style=" border: 1px solid black;" type="text" placeholder="First Name" name="FirstName"><input  style=" border: 1px solid black;" type="text" placeholder="Last Name" name="LastName"></div>
         <label>Email:</label><div class="row">
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></div><input type="email" placeholder="Email"  name="Email" required></div>
+            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></div><input type="email" class="eminput" placeholder="Email"  name="Email" required></div>
         <label>Password:</label>
         <div class="row">
         
-        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30px"><path d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z"/></svg></div><input type="password" placeholder="Password"  name="Password" required></div>
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30px"><path d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z"/></svg></div><input type="password" class="passinkk"  placeholder="[A-Z]--[\d]--[!@#]."  name="Password" required></div>
         <label>Confirm Password:</label>
         <div class="row">
         
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30px"><path d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z"/></svg></div><input type="password" placeholder="Confirm Password" name="ConfirmPassword" required></div>
+            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30px"><path d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z"/></svg></div><input type="password" class="passinkk" placeholder="[A-Z]--[\d]--[!@#]"  name="ConfirmPassword" required></div>
 
         
-        <button style="text-decoration: none;" type="submit">submit</button>
+        <button id="signupbutton" type="submit" value="submit">Submit</button>
         <span>
         <span>Already have Account <a href="./signin.html"> Log In</a></span></span>
     </form>
    
+<script>
+    let signupbutt=document.querySelector("#signupbutton")
+let  signupfo=document.querySelector("#signupfo")
+
+const impem  = document.querySelector('.eminput');
+const imppass = document.querySelectorAll('.passinkk');
+
+signupbutt.addEventListener("click",(e)=>{
+    signupbutt.innerHTML="submit"
+   e.preventDefault()
+   valda()
+
+})
+
+function valda(){
+alert("l")
+
+ let inputsdo=document.querySelectorAll("input")
+ console.log(inputsdo)
+
+ let regex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+
+ inputsdo.forEach((inp)=>{
+    if (inp.value.trim()=='') {
+       console.log("empty")
+       inp.style.border="1px solid red"
+       inp.style.color=" red"
+    }
+    else{
+        inp.style.border=""
+      
+        inp.style.color=""
+    }
+ })
+////////////////////////////////////
+ let result = regex.test(impem.value.trim());
+         if (result  ) {
+           console.log("The  is a valid email address!")
+         } else {
+            impem.value=""
+            impem.style.cssText="border:1px solid red ;"
+            impem.placeholder="enter valid email"
+       
+         }
+/////////////
+let regexb =  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{8,15}$/;
+
+imppass.forEach((inp)=>{
+    console.log(inp.value.trim())
+    let testj=regexb.test(inp.value.trim())
+    if (testj ) {
+        console.log("valid pass")
+        
+    } 
+    else{
+   
+   inp.placeholder="enter valid passward"
+    
+    }
+})
+//////////////////////////
+let hh=imppass[0];
+let hhg=imppass[1];
+console.log("mmmm",hh,"nn",hhg)
+if ((hh.value.trim()==hhg.value.trim()) && (!hh.value.trim()=="")&& (!hhg.value.trim()=="")) {
+    console.log("eql passward")
+   
+    hh.style.cssText=""
+hhg.style.cssText=""
+   
+    
+}else{ console.log(" not eql passward")
+hh.style.cssText="border:1px solid red ;"
+hh.value=""
+hhg.value=""
+hhg.style.cssText="border:1px solid red ;"
+}
+
+}
+
+</script>
 </body>
 </html>
