@@ -475,6 +475,7 @@ font-family: 'Roboto', sans-serif;">25555</del><P style="margin-left: 1%;color: 
 </div>
     </div>
 <script>
+    var a ;
 //    import { cartarrayset} from "./arraycart"
     let addcar=document.getElementsByClassName("addcar")[0];
     console.log(addcar)
@@ -593,7 +594,7 @@ console.log(ggjjo)///////   eee ggjjoo ennathann nammuda a aobject data kittiyat
 // parsing the jsonstrigified string to json oparse
 let  jspaobjar=JSON.parse(ggjjo)
 console.log("helloooo",jspaobjar[0])
-let loccart=localStorage.setItem("arryoolcart",)
+
 
 
 console.log("llllllļ/////",vhk)
@@ -625,6 +626,7 @@ addcar.addEventListener("click",()=>{
 senttocartfood()
 
 
+
 })
 function senttocartfood(){
     alert("kk")
@@ -632,12 +634,17 @@ function senttocartfood(){
 
 let ggjjoo=decodeURIComponent(hhrh.slice(6))
 
-console.log(ggjjoo)///////   eee ggjjoo ennathann nammuda a aobject data kittiyath 
+///////   eee ggjjoo ennathann nammuda a aobject data kittiyath 
+console.log("new  the ",ggjjoo);
+
 //////////.....................................................................................................................................
 
 // parsing the jsonstrigified string to json oparse
 let  jspaobjar=JSON.parse(ggjjoo)
-console.log("adhilhabeebmaded",jspaobjar[0])
+let sto=JSON.stringify(jspaobjar[0])
+
+sentvallocalstor(sto)
+console.log("adhilhabeebmaded",sto)
 adbagarr.push(jspaobjar[0])
 console.log("addarrbag is the ",adbagarr
 )
@@ -654,10 +661,33 @@ console.log(encodedData)
 //// senting the data to a page     
 let urlsen="food.html?data="+encodedData;    /// the   ?data=  is important to add data 
 
- window.location.href = urlsen;
+//  window.location.href = urlsen;
 
 // console.log("imported array",cartarrayset)
 
+
+}
+
+function sentvallocalstor(para){
+    a=[para];
+    console.log("aaaaisssssss",a)
+  let get=localStorage.getItem("session")
+  if (get) {
+    alert("onnnoooooood")
+    let bb=JSON.parse(localStorage.getItem('session'))
+    console.log("bbjson",bb)
+  let   mm=JSON.stringify(bb)
+
+    a=[...bb,para]
+
+////adding new arr to session
+    localStorage.setItem('session', JSON.stringify(a));
+    console.log("worked",a)
+  }else{ 
+  alert("iiiiillooooooo")
+  localStorage.setItem('session', JSON.stringify(a) );
+    
+  }
 
 }
 </script>
