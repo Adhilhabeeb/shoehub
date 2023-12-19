@@ -1,18 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
+    <style>
+        .mainnhh{
+            width: 100%;
+            height: auto;
+        }
+        .wh{text-transform: capitalize;
+            display: flex;
+            justify-content: center;
+            color: black;
+            font-size: large;
+            background-color: #fff;
+            align-items: center;
+           
+        }
+        .whshow{
+            width: 100%;
+            
+            height: auto;
+        }
+        .prid{
+            width: 40%;
+            background-color: rgb(255, 255, 255);
+            height: 25vh;
+            padding: 10px; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-sizing: border-box;
+            display: block;margin-left: auto;
+            margin-right: auto;
+            margin-top: 0.5%;
+            border-radius: 6px;
+        }
+        .wtsh1{
+            float: left;
+            background-color: aquamarine;
+            height: 100%;
+            width: 40%;
+        }
+        .wtsh1>image{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .wtsh2{  float: left;
+           
+            height: 100%;
+          
+            font-weight: 600;
+            
+            text-transform: capitalize;
+            width: 60%;
+            font-size: larger;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            display: block;
+            padding-top: 2%;
+            box-sizing: border-box;
+
+        }
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+
+    <div class="mainnhh">
+<div class="wh"> <h1>whistlist</h1></div>
+<div class="whshow">
+<div class="prid">
+    <div class="wtsh1">
+        <img style=" width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;" src="./andres-jasso-PqbL_mxmaUE-unsplash.jpg" alt="">
+    </div>
+    <div class="wtsh2">
+    <p>hekkk</p>
+    <i class="fa fa-heart" style="font-size:24px;margin-top: 5%;color: rgb(228, 16, 16);"></i>
+    
+    </div>
+</div>
+
+</div>
+    </div>
     <script>
+        
+
+      
          let sessionloca=  localStorage.getItem('wish')
-        let sessionparese=JSON.parse(sessionloca)
+        let prid=document.querySelector(".prid")
+        let  whshow=document.querySelector(".whshow")
+        let img=prid.childNodes[1].childNodes[1]
+        let name=prid.childNodes[3].childNodes[1]
+        let icon =prid.childNodes[3].childNodes[3]
+let hh;
+         if (!sessionloca) {
+            setInterval(()=>{
+          return   location.reload()
+          },4000)
+            hh="empty"
+         }else{
+          setInterval(()=>{
+          return   location.reload()
+          },4000)
+            let sessionparese=JSON.parse(sessionloca)
+        let arca=[...sessionparese]
+     let bbpar=arca.map(el=>{
+        return JSON.parse(el)
+     })
+     console.log("n",whshow)
 
-     console.log(sessionparese)
-
+let whol=bbpar.map(or=>{
+    return `
+    <div class="prid">
+    <div class="wtsh1">
+        <img style=" width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;" src="${or.shoeimage}" alt="">
+    </div>
+    <div class="wtsh2">
+    <p> ${or.shoename}</p>
+    <i class="fa fa-heart" id="${or.shoename}" style="font-size:24px;margin-top: 5%;color: rgb(228, 16, 16);"></i>
+    
+    </div>
+</div>
+    `
+}).join(" ")
+whshow.innerHTML=whol
+         }
+        
     </script>
 </body>
 </html>

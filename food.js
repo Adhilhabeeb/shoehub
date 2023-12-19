@@ -19,7 +19,7 @@
 //       ratting:"4.7",
 //       description:"The Maco SL is inspired by the aerodynamics of F1 cars.",
 
-//       size:"8UK",
+// id:    ,      size:"8UK",
     
 //       categary:"Sports",
 //       orginalprice:"₹60000",
@@ -32,7 +32,7 @@
 //        ratting:"4.8",
 //        description:"Meet the newest member of the PUMA Rider family, the Blktop Rider, ",
 
-//        size:"11uk",
+//  id:    ,      size:"11uk",
 //        categary:"Casual",
 //        orginalprice:"₹135999",
 //        offer:"60%"
@@ -44,7 +44,7 @@
 //        ratting:"4.4",
 //        description:"Our RS-X Games Sneakers are a reincarnation of a 2018 classic",
 
-//        size:"8UK",
+//  id:    ,      size:"8UK",
 
 //        categary:"Running",
 //        orginalprice:"₹95999",offer:"68%"
@@ -56,7 +56,7 @@
 //        ratting:"4.5",
 //        description:"e continue the story of Gidra– the newspaper that started in California ",
 
-//        size:"9UK",
+//  id:    ,      size:"9UK",
 //        categary:"Sports",
 //        orginalprice:"₹12999",offer:"78%"
 //      },
@@ -67,7 +67,7 @@
 //        ratting:"4.5",
 //        description:"Launched in 1991, the Disc was the first lace less sports shoe  ",
 
-//        size:"10UK",
+//  id:    ,      size:"10UK",
 //        categary:"Casual",
 //        orginalprice:"₹99199",offer:"58%"
 //      },
@@ -78,7 +78,7 @@
 //        ratting:"4.5",
 //        description:"jack in 1987, the PUMA Slipstream Mid entered the scene as a basketball sneaker.",
 
-//        size:"11UK",
+//  id:    ,      size:"11UK",
 //        categary:"Running",
 //        orginalprice:"₹90999",offer:"65%"
 //      },  
@@ -89,7 +89,7 @@
 //        ratting:"4.7",
 //        description:"The Maco SL is inspired by the aerodynamics of F1 cars.",
  
-//        size:"8UK",
+//  id:    ,      size:"8UK",
      
 //        categary:"Sports",
 //        orginalprice:"₹60000",
@@ -102,7 +102,7 @@
 //         ratting:"4.8",
 //         description:"Meet the newest member of the PUMA Rider family, the Blktop Rider, ",
  
-//         size:"11uk",
+//   id:    ,      size:"11uk",
 //         categary:"Casual",
 //         orginalprice:"₹135999",
 //         offer:"60%"
@@ -114,7 +114,7 @@
 //         ratting:"4.4",
 //         description:"Our RS-X Games Sneakers are a reincarnation of a 2018 classic",
  
-//         size:"8UK",
+//   id:    ,      size:"8UK",
  
 //         categary:"Running",
 //         orginalprice:"₹95999",offer:"68%"
@@ -126,7 +126,7 @@
 //         ratting:"4.5",
 //         description:"e continue the story of Gidra– the newspaper that started in California ",
  
-//         size:"9UK",
+//   id:    ,      size:"9UK",
 //         categary:"Sports",
 //         orginalprice:"₹12999",offer:"78%"
 //       },
@@ -137,7 +137,7 @@
 //         ratting:"4.5",
 //         description:"Launched in 1991, the Disc was the first lace less sports shoe  ",
  
-//         size:"10UK",
+//   id:    ,      size:"10UK",
 //         categary:"Casual",
 //         orginalprice:"₹99199",offer:"58%"
 //       },
@@ -148,7 +148,7 @@
 //         ratting:"4.5",
 //         description:"jack in 1987, the PUMA Slipstream Mid entered the scene as a basketball sneaker.",
  
-//         size:"11UK",
+//   id:    ,      size:"11UK",
 //         categary:"Running",
 //         orginalprice:"₹90999",offer:"65%"
 //       }, {
@@ -158,7 +158,7 @@
 //         ratting:"4.7",
 //         description:"The Maco SL is inspired by the aerodynamics of F1 cars.",
   
-//         size:"8UK",
+//   id:    ,      size:"8UK",
       
 //         categary:"Sports",
 //         orginalprice:"₹60000",
@@ -170,7 +170,7 @@
 //        ratting:"4.5",
 //        description:"e continue the story of Gidra– the newspaper that started in California ",
 
-//        size:"9UK",
+//  id:    ,      size:"9UK",
 //        categary:"Sports",
 //        orginalprice:"₹12999",offer:"78%"
 //      },
@@ -181,7 +181,7 @@
 //        ratting:"4.5",
 //        description:"Launched in 1991, the Disc was the first lace less sports shoe ",
 
-//        size:"10UK",
+//  id:    ,      size:"10UK",
 //        categary:"Casual",
 //        orginalprice:"₹99199",offer:"58%"
 //      }
@@ -210,11 +210,11 @@
 //       </div>
 //       <div class="whistshow">
 //       <div class="butwhist">
-//       <button  onclick="myhh(this)" class="butextfa"><i class="fa fa-heart-o"   style="font-size:20px"></i><p style="margin-left: 3%;"> WISHLIST</p>  </button>
+//       <button  onclick="myhh(this)" class="butextfa"><i class="fa fa-heart-o"   style=id:    ,"font-size:20px"></i><p style="margin-left: 3%;"> WISHLIST</p>  </button>
 //       </div>
       
 //       <div class="shsi">
-//       ${elem.size}
+//       $id:    ,{elem.size}
 //       </div>
 //       </div>
 //       <div class="shgthh">
@@ -425,7 +425,7 @@ const menu=[
       ratting:"4.7",
       description:"The Maco SL is inspired by the aerodynamics of F1 cars.",
 
-      size:"8UK",
+id: 1   ,      size:"8UK",
     
       categary:"Sports",
       orginalprice:"₹60000",
@@ -438,7 +438,7 @@ const menu=[
        ratting:"4.8",
        description:"Meet the newest member of the PUMA Rider family, the Blktop Rider, ",
 
-       size:"11uk",
+ id:  2  ,      size:"11uk",
        categary:"Casual",
        orginalprice:"₹135999",
        offer:"60%"
@@ -450,7 +450,7 @@ const menu=[
        ratting:"4.4",
        description:"Our RS-X Games Sneakers are a reincarnation of a 2018 classic",
 
-       size:"8UK",
+ id:  3  ,      size:"8UK",
 
        categary:"Running",
        orginalprice:"₹95999",offer:"68%"
@@ -462,7 +462,7 @@ const menu=[
        ratting:"4.5",
        description:"e continue the story of Gidra– the newspaper that started in California ",
 
-       size:"9UK",
+ id:  4  ,      size:"9UK",
        categary:"Sports",
        orginalprice:"₹12999",offer:"78%"
      },
@@ -473,7 +473,7 @@ const menu=[
        ratting:"4.5",
        description:"Launched in 1991, the Disc was the first lace less sports shoe  ",
 
-       size:"10UK",
+ id:   5 ,      size:"10UK",
        categary:"Casual",
        orginalprice:"₹99199",offer:"58%"
      },
@@ -484,7 +484,7 @@ const menu=[
        ratting:"4.5",
        description:"jack in 1987, the PUMA Slipstream Mid entered the scene as a basketball sneaker.",
 
-       size:"11UK",
+ id:  6  ,      size:"11UK",
        categary:"Running",
        orginalprice:"₹90999",offer:"65%"
      },  
@@ -495,7 +495,7 @@ const menu=[
        ratting:"4.7",
        description:"The Maco SL is inspired by the aerodynamics of F1 cars.",
  
-       size:"8UK",
+ id:  7  ,      size:"8UK",
      
        categary:"Sports",
        orginalprice:"₹60000",
@@ -508,7 +508,7 @@ const menu=[
         ratting:"4.8",
         description:"Meet the newest member of the PUMA Rider family, the Blktop Rider, ",
  
-        size:"11uk",
+  id:  8  ,      size:"11uk",
         categary:"Casual",
         orginalprice:"₹135999",
         offer:"60%"
@@ -520,7 +520,7 @@ const menu=[
         ratting:"4.4",
         description:"Our RS-X Games Sneakers are a reincarnation of a 2018 classic",
  
-        size:"8UK",
+  id:  9  ,      size:"8UK",
  
         categary:"Running",
         orginalprice:"₹95999",offer:"68%"
@@ -532,7 +532,7 @@ const menu=[
         ratting:"4.5",
         description:"e continue the story of Gidra– the newspaper that started in California ",
  
-        size:"9UK",
+  id:  10  ,      size:"9UK",
         categary:"Sports",
         orginalprice:"₹12999",offer:"78%"
       },
@@ -543,7 +543,7 @@ const menu=[
         ratting:"4.5",
         description:"Launched in 1991, the Disc was the first lace less sports shoe  ",
  
-        size:"10UK",
+  id:   11 ,      size:"10UK",
         categary:"Casual",
         orginalprice:"₹99199",offer:"58%"
       },
@@ -554,7 +554,7 @@ const menu=[
         ratting:"4.5",
         description:"jack in 1987, the PUMA Slipstream Mid entered the scene as a basketball sneaker.",
  
-        size:"11UK",
+  id: 12   ,      size:"11UK",
         categary:"Running",
         orginalprice:"₹90999",offer:"65%"
       }, {
@@ -564,7 +564,7 @@ const menu=[
         ratting:"4.7",
         description:"The Maco SL is inspired by the aerodynamics of F1 cars.",
   
-        size:"8UK",
+  id:  13  ,      size:"8UK",
       
         categary:"Sports",
         orginalprice:"₹60000",
@@ -576,7 +576,7 @@ const menu=[
        ratting:"4.5",
        description:"e continue the story of Gidra– the newspaper that started in California ",
 
-       size:"9UK",
+ id:  14  ,      size:"9UK",
        categary:"Sports",
        orginalprice:"₹12999",offer:"78%"
      },
@@ -587,7 +587,7 @@ const menu=[
        ratting:"4.5",
        description:"Launched in 1991, the Disc was the first lace less sports shoe ",
 
-       size:"10UK",
+ id:  15  ,      size:"10UK",
        categary:"Casual",
        orginalprice:"₹99199",offer:"58%"
      }
@@ -606,7 +606,7 @@ fetch('./shoes.json')
 function displaymenuitem(menuo){
     let displaymenu=menuo.map(function(elem){
         // console.log(elem.ratting)
-        
+               
         return ` <div  onclick="thedi(this)" id="${elem.shoename}" class="mmh">
         <div class="mmh2">
         <div class="imgshoesvv">
@@ -619,11 +619,11 @@ function displaymenuitem(menuo){
       </div>
       <div class="whistshow">
       <div class="butwhist">
-      <button  onclick="myhh(this)" class="butextfa"><i class="fa fa-heart-o"   style="font-size:20px"></i><p style="margin-left: 3%;"> WISHLIST</p>  </button>
+      <button  onclick="myhh(this)" class="butextfa"><i class="fa fa-heart-o"   style=id:    ,"font-size:20px"></i><p style="margin-left: 3%;"> WISHLIST</p>  </button>
       </div>
       
       <div class="shsi">
-      ${elem.size}
+      $id:    ,{elem.size}
       </div>
       </div>
       <div class="shgthh">

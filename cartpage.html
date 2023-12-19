@@ -71,6 +71,8 @@ label {
 .column-labels .product-details,
 .column-labels .product-removal {
     text-indent: -9999px;
+    position: absolute;
+    top: 0px;
 }
 
 /* Product entries */
@@ -204,7 +206,7 @@ label {
     }
 
     .product-line-price {
-        float: right;
+      
         width: 70px;
     }
 }
@@ -223,7 +225,7 @@ label {
     }
 
     .product .product-line-price:before {
-        content: 'Item Total: $';
+        content: 'Item Total:';
     }
 
     .totals .totals-item label {
@@ -270,9 +272,26 @@ label {
     
     <script>
         let sessionloca=  localStorage.getItem('session')
+let totalsvalue=document.querySelector("#cart-total")
+let artot=[]
+
+// pritotar.forEach(pr=>{
+//     console.log("hhh",pr)
+// //     pr.innerHTML.slice(1)
+// //     artot.push( pr.innerHTML.slice(1))
+// // console.log(artot)
+// })
+console.log(totalsvalue,"an",);
+        if (!sessionloca) {
+document.querySelector(".shopping-cart").innerHTML="empty"
+document.querySelectorAll(".shopping-cart").style.cssText="display:flex;justify-content:center;align-items:center;"
+        }
         let sessionparese=JSON.parse(sessionloca)
         let arca=[...sessionparese]
-     let bbpar=arca.map(el=>{
+        let dupdlt=new Set(arca)
+        console.log("dup",...dupdlt)
+        let duparr=[...dupdlt]
+     let bbpar=duparr.map(el=>{
         return JSON.parse(el)
      })
      function changeooinp(){
@@ -289,19 +308,21 @@ label {
       <img src="${ell.shoeimage}">
     </div>
     <div class="product-details">
-      <div class="product-title">${ell.shoename}</div>
+      <div class="product-title">${ell.shoename }</div>
       <p class="product-description">${ell.description}</p>
     </div>
-    <div class="product-price">${ell.shoeprice}</div>
-    <div class="product-quantity">
-      <input type="number"  onchange="changeooinp(value)" class="inputpronu" value="1" min="1">
+    <div class="product-price">${ell.orginalprice}</div>
+    <div  class="product-quantity">
+      <input type="number" id="${ell.id}" onchange="changeooinp(this)" class="inputpronu" value="1" min="1">
     </div>
-    <div class="product-removal">
+    <div  ">
+    <div   class="product-removal">
       <button id="${ell.shoename}" class="remove-product">
         Remove
       </button>
     </div>
-    <div class="product-line-price">25.98</div>
+    <div id="${ell.id}" class="product-line-price mmpri"> <p id="prio" class="pri">${ell.shoeprice}</p></div>
+    </div>
   </div>`
 
     }).join("")
@@ -310,9 +331,84 @@ label {
 
 
    function changeooinp(e){
-alert("kk")
+    let prar=document.querySelectorAll("#prio")
+console.log("mmm",prar);
+prar.forEach((pr)=>{
+    artot.push(pr.innerHTML.slice(1))
+    console.log("hellloo",artot)
+})
+console.log("jlllll",...artot)
+let sti=JSON.stringify(...artot)
 
+let duoo=new Set(sti)
+
+console.log("mmmnnbbvccxxx",sti,"and",duoo)
+let text = artot.join("+");
+
+totalsvalue.innerHTML=eval(text)
+console.log("gg",text)
+
+alert("kk")
+let mainproddiv=e.parentElement.parentElement
+let productprice=mainproddiv.querySelector(".product-price").innerText.slice(1)
+
+ let tot=eval(productprice * e.value)
+ let productlineprice=mainproddiv.querySelector(".pri").innerHTML=`₹${tot}`
+ console.log("input this",e.parentElement.parentElement,"and",productprice ,"evalu",tot,"totsho",productlineprice)
+
+
+console.log("the",prio);
    }
+   if (sessionloca) {
+
+document.addEventListener("DOMContentLoaded",()=>{
+    /////////////////////////////////////////////////////////
+//   setTimeout(()=>{
+//  let inva=  document.querySelectorAll(".inputpronu")
+//  inva.forEach((inda)=>{
+//     inda.addEventListener("change",(e)=>{
+//  let totamt=document.querySelector(".mmpri")
+//  console.log("nnnnnnn",totamt)
+//     })
+//  })
+
+//  console.log(inva)
+//   },2000)
+ /////////////////////////////////////////////////////////
+ let prar=document.querySelectorAll("#prio")
+console.log("mmm",prar);
+prar.forEach((pr)=>{
+    artot.push(pr.innerHTML.slice(1))
+    console.log("hellloo",artot)
+
+})
+console.log("jlllll",...artot)
+let nnb=[]
+artot.forEach(r=>{
+    nnb.push(r)
+})
+console.log("cccccc",nnb)
+
+let sti=JSON.stringify(...artot)
+console.log("mmmnnbbvccxxx",sti)
+let duoo=new Set(sti)
+
+console.log("mmmnnbbvccxxx",sti,"and",duoo)
+
+let text = artot.join("+");
+
+totalsvalue.innerHTML=eval(text)
+console.log("gg",text)
+
+})
+// let duartot=[]
+//  let jjllo=JSON.stringify(...artot)
+//  console.log("nnnnnnnnn",jjllo)
+   }
+
+                      
+               
+   
 
     </script>
 </body>
