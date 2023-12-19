@@ -476,6 +476,7 @@ font-family: 'Roboto', sans-serif;">25555</del><P style="margin-left: 1%;color: 
     </div>
 <script>
     var a ;
+    var w;
 //    import { cartarrayset} from "./arraycart"
     let addcar=document.getElementsByClassName("addcar")[0];
     console.log(addcar)
@@ -588,7 +589,7 @@ if ( (pincodeinp.value.length<6) ||(pincodeinp.value.length>6) ) {
 
 let ggjjo=decodeURIComponent(hhh.slice(6))
 
-console.log(ggjjo)///////   eee ggjjoo ennathann nammuda a aobject data kittiyath 
+console.log("helloooooooo",ggjjo)///////   eee ggjjoo ennathann nammuda a aobject data kittiyath 
 //////////.....................................................................................................................................
 
 // parsing the jsonstrigified string to json oparse
@@ -690,6 +691,42 @@ function sentvallocalstor(para){
   }
 
 }
+//////////////////////////////whistlist///////
+document.getElementsByClassName("buadwhi")[0].addEventListener("click",()=>{
+
+
+    alert("kkk")
+    let hhrh=window.location.search
+
+let ggjjoo=decodeURIComponent(hhrh.slice(6))
+
+///////   eee ggjjoo ennathann nammuda a aobject data kittiyath 
+console.log("new  the ",ggjjoo);
+
+//////////.....................................................................................................................................
+
+// parsing the jsonstrigified string to json oparse
+let  jspaobjar=JSON.parse(ggjjoo)
+let stb=JSON.stringify(jspaobjar[0])
+
+//............................................
+w=[stb];
+    console.log("aaaaisssssss",w)
+    let get=localStorage.getItem("wish")
+    if (get) {
+        alert("onnnoooooood")
+    let bb=JSON.parse(localStorage.getItem('wish'))
+    console.log("bbjsonwished",bb)
+  let   mm=JSON.stringify(bb)
+
+    w=[...bb,stb]
+
+////adding new arr to session
+    localStorage.setItem('wish', JSON.stringify(w));
+    console.log("worked",w)
+    }alert("iiiiillooooooowhist")
+  localStorage.setItem('wish', JSON.stringify(w) );
+})
 </script>
 <!-- <script src="./food.js"></script> -->
 
