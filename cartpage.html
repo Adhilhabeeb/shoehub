@@ -208,7 +208,11 @@ label {
     .product-line-price {
       
         width: 70px;
+       
     }
+}
+.paddtop{
+    padding-top: 500px;
 }
 
 /* Make more adjustments for phone */
@@ -239,7 +243,7 @@ label {
     </style>
 </head>
 <body>
-    <h1>Shopping Cart</h1>
+    <h1  style="text-align: center;">Shopping Cart</h1>
 
 <div class="shopping-cart">
 
@@ -283,8 +287,8 @@ let artot=[]
 // })
 console.log(totalsvalue,"an",);
         if (!sessionloca) {
-document.querySelector(".shopping-cart").innerHTML="empty"
-document.querySelectorAll(".shopping-cart").style.cssText="display:flex;justify-content:center;align-items:center;"
+document.querySelector(".shopping-cart").innerHTML="  Cart is empty"
+document.querySelector(".shopping-cart").style.cssText="display:flex;align-items:center;justify-content:center;padding-top:6%;font-size:larger;"
         }
         let sessionparese=JSON.parse(sessionloca)
         let arca=[...sessionparese]
